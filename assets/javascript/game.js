@@ -31,7 +31,7 @@ function beginGame (){
     generateTargetScore() 
     setGemValue()
     targetScore = generateTargetScore()
-    $("#targetScore").text("Target Score" + targetScore)
+    $("#targetScore").text("Target Score: " + targetScore)
 }
 $("#blueGem").on("click",function(){
     console.log("blue gem was clicked")
@@ -74,11 +74,11 @@ function checkingScore(){
     }
 }
 function updateCurrentScore(){
-    $("#currentScore").text("Your total score is:" + currentScore)
+    $("#currentScore").text("Your total score is: " + currentScore)
 }
 
 function resetGame(){
-    
+
 }
 
 beginGame()
