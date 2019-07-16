@@ -14,7 +14,6 @@ function generateTargetScore (){
     return(randomNumber) 
 }
 
-
 function generateGemScore (){
     var randomNumber = Math.round(Math.random()*12)
     return(randomNumber) 
@@ -33,6 +32,7 @@ function beginGame (){
     targetScore = generateTargetScore()
     $("#targetScore").text("Target Score: " + targetScore)
 }
+
 $("#blueGem").on("click",function(){
     console.log("blue gem was clicked")
     currentScore = currentScore+blueGem
@@ -68,9 +68,13 @@ $("#yellowGem").on("click",function(){
 function checkingScore(){
     if (currentScore == targetScore) {
         console.log("you win")
+        Wins = Wins + 1
+        $("#Losses").text("Losses: " + 1)
     }
     if (currentScore > targetScore){
         console.log("you lose")
+        Losses = Losses + 1
+        $("#Losses").text("Losses: " + 1)
     }
 }
 function updateCurrentScore(){
@@ -78,7 +82,13 @@ function updateCurrentScore(){
 }
 
 function resetGame(){
+    if (currentScore == targetScore) {
+        targetScore = 0 
+        currentScore = 0
+
+    }
+    
 
 }
 
-beginGame()
+beginGame() 
