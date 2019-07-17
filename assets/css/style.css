@@ -20,6 +20,11 @@
     line-height:1.6;
   }
 
+  h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+
   img{
     float: left;
     position: relative;

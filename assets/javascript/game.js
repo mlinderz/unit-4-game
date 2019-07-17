@@ -67,12 +67,12 @@ $("#yellowGem").on("click",function(){
 
 function checkingScore(){
     if (currentScore == targetScore) {
-        console.log("you win")
+        alert("you win")
         Wins = Wins + 1
         $("#Losses").text("Losses: " + 1)
     }
     if (currentScore > targetScore){
-        console.log("you lose")
+        alert("you lose")
         Losses = Losses + 1
         $("#Losses").text("Losses: " + 1)
     }
